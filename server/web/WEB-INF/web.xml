@@ -14,5 +14,15 @@
     <url-pattern>/skiers/*</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ResortServlet</servlet-name>
+    <servlet-class>ResortServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ResortServlet</servlet-name>
+    <url-pattern>/resorts/*</url-pattern>
+  </servlet-mapping>
+
 </web-app>
 

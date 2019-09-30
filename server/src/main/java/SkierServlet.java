@@ -89,8 +89,8 @@ public class SkierServlet extends HttpServlet {
       res.setStatus(HttpServletResponse.SC_OK);
       // Process url params
       if (urlParts[2].equals("vertical")) {
-        Resorts resorts = new Resorts(urlParts[1], 10);
-        res.getWriter().write(gson.toJson(resorts));
+        SkierVertical skierVertical = new SkierVertical(urlParts[1], 10);
+        res.getWriter().write(gson.toJson(new SkierResorts(skierVertical)));
       } else {
         res.getWriter().write("34507");
       }

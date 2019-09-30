@@ -1,17 +1,11 @@
 public class Resorts {
-  private String seasonID;
-  private int vertical;
+  private ResortInfo resorts;
 
-  public Resorts(String seasonID, int vertical) {
-    this.seasonID = seasonID;
-    this.vertical = vertical;
+  public Resorts(ResortInfo resorts) {
+    this.resorts = resorts;
   }
 
-  public String getSeasonID() {
-    return seasonID;
-  }
-
-  public int getVertical() {
-    return vertical;
+  public ResortInfo getResorts() {
+    return resorts;
   }
 }
