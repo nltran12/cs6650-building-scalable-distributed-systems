@@ -11,6 +11,7 @@ public class ResortServlet extends HttpServlet {
 
   private Gson gson = new Gson();
 
+
   protected void doPost(HttpServletRequest request,
       HttpServletResponse response)
       throws ServletException, IOException {
@@ -26,7 +27,7 @@ public class ResortServlet extends HttpServlet {
     }
 
     String[] urlParts = urlPath.split("/");
-    if (!isUrlValid(urlParts) || request.getParameter("body").equals("")) {
+    if (!isUrlValid(urlParts)) {
       response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
       Message message = new Message("string");
       response.getWriter().write(gson.toJson(message));

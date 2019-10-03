@@ -31,30 +31,6 @@ public class SkierServlet extends HttpServlet {
     String[] urlParts = urlPath.split("/");
     // and now validate url path and return the response status code
     // (and maybe also some value if input is valid)
-    BufferedReader buffIn = null;
-    try {
-      buffIn = request.getReader();
-      StringBuilder reqBody = new StringBuilder();
-      String line;
-      while ((line = buffIn.readLine()) != null) {
-        reqBody.append(line);
-      }
-      response.getWriter().write(reqBody.toString());
-    } catch (Exception e) {
-      response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-      Message message = new Message("string");
-      response.getWriter().write(gson.toJson(message));
-      return;
-    } finally {
-      if (buffIn != null) {
-        try {
-          buffIn.close();
-        } catch (IOException ex) {
-          ex.printStackTrace();
-        }
-      }
-    }
-
     if (!isUrlValid(urlParts, request)) {
       response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
       Message message = new Message("string");
