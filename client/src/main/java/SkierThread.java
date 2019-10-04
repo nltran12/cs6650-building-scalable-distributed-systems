@@ -61,7 +61,7 @@ public class SkierThread extends Thread {
     for (int i = 0; i < this.numPostRequests; i++) {
       LiftRide liftRide = new LiftRide();
       liftRide.time(random.nextInt(this.endTime - this.startTime) + this.startTime);
-      liftRide.liftID(this.liftID);
+      liftRide.liftID(random.nextInt(this.liftID) + 1);
       Integer skierID = random.nextInt(this.endSkierID - this.startSkierID) + this.startSkierID;
       try {
         apiInstance.writeNewLiftRide(liftRide, this.resortID, this.seasonID, this.dayID, skierID);
@@ -71,7 +71,6 @@ public class SkierThread extends Thread {
       }
     }
     try {
-      System.out.println("Thread countdown");
       latch.countDown();
     } catch (Exception e) {
       e.printStackTrace();
