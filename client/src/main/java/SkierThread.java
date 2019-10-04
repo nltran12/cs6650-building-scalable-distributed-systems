@@ -2,9 +2,8 @@ import io.swagger.client.ApiClient;
 import io.swagger.client.ApiException;
 import io.swagger.client.api.SkiersApi;
 import io.swagger.client.model.LiftRide;
-import java.util.Random;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class SkierThread extends Thread {
   private Integer resortID;
@@ -53,16 +52,15 @@ public class SkierThread extends Thread {
    */
   @Override
   public void run() {
-    Random random = new Random();
     String basePath = "http://localhost:8080/server_war_exploded/";
     SkiersApi apiInstance = new SkiersApi();
     ApiClient client = apiInstance.getApiClient();
     client.setBasePath(basePath);
     for (int i = 0; i < this.numPostRequests; i++) {
       LiftRide liftRide = new LiftRide();
-      liftRide.time(random.nextInt(this.endTime - this.startTime) + this.startTime);
-      liftRide.liftID(random.nextInt(this.liftID) + 1);
-      Integer skierID = random.nextInt(this.endSkierID - this.startSkierID) + this.startSkierID;
+      liftRide.time(ThreadLocalRandom.current().nextInt(this.endTime - this.startTime) + this.startTime);
+      liftRide.liftID(ThreadLocalRandom.current().nextInt(this.liftID) + 1);
+      Integer skierID = ThreadLocalRandom.current().nextInt(this.endSkierID - this.startSkierID) + this.startSkierID;
       try {
         apiInstance.writeNewLiftRide(liftRide, this.resortID, this.seasonID, this.dayID, skierID);
       } catch (ApiException e) {
