@@ -11,10 +11,12 @@ public class Phase {
   private int endTime;
   private int numPostRequests;
   private int numWaitThreads;
+  private PostResults results;
+  private CountDownLatch overallLatch;
 
   public Phase(int numThreads, int numSkiers, Integer resortID, String seasonID,
       String dayID, Integer numLifts, int startTime, int endTime, int numPostRequests,
-      int numWaitThreads) {
+      int numWaitThreads, PostResults results, CountDownLatch overallLatch) {
     this.numThreads = numThreads;
     this.numSkiers = numSkiers;
     this.resortID = resortID;
@@ -25,6 +27,8 @@ public class Phase {
     this.endTime = endTime;
     this.numPostRequests = numPostRequests;
     this.numWaitThreads = numWaitThreads;
+    this.results = results;
+    this.overallLatch = overallLatch;
   }
 
   public void run() throws InterruptedException {
@@ -33,7 +37,8 @@ public class Phase {
       int startSkiers = 1 + (i * (this.numSkiers / this.numThreads));
       int endSkiers = (i + 1) * (this.numSkiers / this.numThreads);
       Thread thread = new SkierThread(this.resortID, this.seasonID, this.dayID, startSkiers,
-          endSkiers, this.startTime, this.endTime, numLifts, latch, numPostRequests);
+          endSkiers, this.startTime, this.endTime, numLifts, latch, numPostRequests, this.results,
+          this.overallLatch);
       thread.start();
     }
     latch.await();

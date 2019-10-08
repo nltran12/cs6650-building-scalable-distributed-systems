@@ -16,6 +16,8 @@ public class SkierThread extends Thread {
   private Integer liftID;
   private CountDownLatch latch;
   private int numPostRequests;
+  private PostResults results;
+  private CountDownLatch overallLatch;
 
   /**
    * Allocates a new {@code Thread} object. This constructor has the same effect as {@linkplain
@@ -25,7 +27,8 @@ public class SkierThread extends Thread {
    */
   public SkierThread(Integer resortID, String seasonID, String dayID,
       Integer startSkierID, Integer endSkierID, Integer startTime, Integer endTime,
-      Integer liftID, CountDownLatch latch, int numPostRequests) {
+      Integer liftID, CountDownLatch latch, int numPostRequests, PostResults results,
+      CountDownLatch overallLatch) {
     this.resortID = resortID;
     this.seasonID = seasonID;
     this.dayID = dayID;
@@ -36,6 +39,8 @@ public class SkierThread extends Thread {
     this.liftID = liftID;
     this.latch = latch;
     this.numPostRequests = numPostRequests;
+    this.results = results;
+    this.overallLatch = overallLatch;
   }
 
   /**
@@ -63,13 +68,16 @@ public class SkierThread extends Thread {
       Integer skierID = ThreadLocalRandom.current().nextInt(this.endSkierID - this.startSkierID) + this.startSkierID;
       try {
         apiInstance.writeNewLiftRide(liftRide, this.resortID, this.seasonID, this.dayID, skierID);
+        results.increment_successful_post();
       } catch (ApiException e) {
         System.err.println("Exception when calling SkierApi#writeNewLiftRide");
+        results.increment_failed_post();
         e.printStackTrace();
       }
     }
     try {
-      latch.countDown();
+      this.latch.countDown();
+      this.overallLatch.countDown();
     } catch (Exception e) {
       e.printStackTrace();
     }
