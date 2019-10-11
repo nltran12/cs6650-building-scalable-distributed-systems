@@ -1,5 +1,4 @@
 import com.google.gson.Gson;
-import java.io.BufferedReader;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,8 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 public class SkierServlet extends HttpServlet {
 
   private Gson gson  = new Gson();
-  private static final int dayIdMin = 1;
-  private static final int dayIdMax = 366;
+  private static final int DAY_ID_MIN = 1;
+  private static final int DAY_ID_MAX = 366;
+  private static final String SEASONS_PARAMETER = "seasons";
+  private static final String DAYS_PARAMETER = "days";
+  private static final String SKIERS_PARAMETER = "skiers";
+  private static final String VERTICAL_PARAMETER = "vertical";
+  private static final String RESORTS_PARAMETER = "resorts";
 
   protected void doPost(HttpServletRequest request,
       HttpServletResponse response)
@@ -82,18 +86,18 @@ public class SkierServlet extends HttpServlet {
           Integer.parseInt(urlPath[i]);
         }
         return (urlPath[3].length() == 4
-            && Integer.valueOf(urlPath[5]) >= dayIdMin
-            && Integer.valueOf(urlPath[5]) <= dayIdMax
-            && urlPath[2].equals("seasons")
-            && urlPath[4].equals("days")
-            && urlPath[6].equals("skiers"));
+            && Integer.valueOf(urlPath[5]) >= DAY_ID_MIN
+            && Integer.valueOf(urlPath[5]) <= DAY_ID_MAX
+            && urlPath[2].equals(SEASONS_PARAMETER)
+            && urlPath[4].equals(DAYS_PARAMETER)
+            && urlPath[6].equals(SKIERS_PARAMETER));
       } catch (Exception e) {
         return false;
       }
     } else if (urlPath.length == 3) {
       try {
         Integer.parseInt(urlPath[1]);
-        return (urlPath[2].equals("vertical") && req.getParameter("resort") != null);
+        return (urlPath[2].equals(VERTICAL_PARAMETER) && req.getParameter(RESORTS_PARAMETER) != null);
       } catch (Exception e) {
         return false;
       }

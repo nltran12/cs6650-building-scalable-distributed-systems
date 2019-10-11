@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ResortServlet extends HttpServlet {
 
   private Gson gson = new Gson();
-
+  private static final String SEASONS_PARAMETER = "seasons";
 
   protected void doPost(HttpServletRequest request,
       HttpServletResponse response)
@@ -70,7 +70,7 @@ public class ResortServlet extends HttpServlet {
     if (urlPath.length == 3) {
       try {
         Integer.parseInt(urlPath[1]);
-        return urlPath[2].equals("seasons");
+        return urlPath[2].equals(SEASONS_PARAMETER);
       } catch (Exception e) {
         return false;
       }
