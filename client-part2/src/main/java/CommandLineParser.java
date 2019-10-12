@@ -1,7 +1,7 @@
 public class CommandLineParser {
   private final int COMMAND_LINE_LENGTH = 5;
   private final int MAX_THREADS = 256;
-  private final int MAX_SKIERS = 5000;
+  private final int MAX_SKIERS = 50000;
   private final int MIN_LIFTS = 5;
   private final int MAX_LIFTS = 60;
   private final int MAX_RUNS = 20;
@@ -28,18 +28,22 @@ public class CommandLineParser {
     try {
       this.numThreads = Integer.parseInt(args[0]);
       if (this.numThreads > MAX_THREADS) {
+        System.out.println("Threads num too high");
         return false;
       }
       this.numSkiers = Integer.parseInt(args[1]);
       if (this.numSkiers > MAX_SKIERS) {
+        System.out.println("Skiers num too high");
         return false;
       }
       this.numLifts = Integer.parseInt(args[2]);
       if (this.numLifts < MIN_LIFTS || this.numLifts > MAX_LIFTS) {
+        System.out.println("Lifts num too high or low");
         return false;
       }
       this.numRuns = Integer.parseInt(args[3]);
       if (this.numRuns > MAX_RUNS) {
+        System.out.println("Runs num too high");
         return false;
       }
       this.port = Integer.parseInt(args[4]);

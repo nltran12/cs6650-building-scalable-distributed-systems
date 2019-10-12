@@ -54,11 +54,11 @@ public class Main {
       printStatistics(results, wallTime);
       // Write results to file
       BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("results.csv"));
+      bufferedWriter.write("start_time,request_type,latency,response_code\n");
       for (String result : results.getFileLines()) {
         bufferedWriter.write(result);
       }
       bufferedWriter.close();
-
     } catch (Exception e) {
       e.printStackTrace();
     }
