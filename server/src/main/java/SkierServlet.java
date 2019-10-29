@@ -40,7 +40,14 @@ public class SkierServlet extends HttpServlet {
       Message message = new Message("string");
       response.getWriter().write(gson.toJson(message));
     } else {
-      response.setStatus(HttpServletResponse.SC_OK);
+      try {
+        Class.forName("com.mysql.jdbc.Driver");
+        LiftRideDao liftRideDao = new LiftRideDao();
+        liftRideDao.createLiftRide(new LiftRide(10, 2, 3, 5, 500, 20));
+        response.setStatus(HttpServletResponse.SC_OK);
+      } catch (ClassNotFoundException ex) {
+        ex.printStackTrace();
+      }
     }
   }
 
