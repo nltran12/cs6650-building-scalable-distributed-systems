@@ -1,12 +1,12 @@
 public class LiftRide {
   private int skierId;
   private int resortId;
-  private int seasonId;
-  private int dayId;
+  private String seasonId;
+  private String dayId;
   private int time;
   private int liftId;
 
-  public LiftRide(int skierId, int resortId, int seasonId, int dayId, int time, int liftId) {
+  public LiftRide(int skierId, int resortId, String seasonId, String dayId, int time, int liftId) {
     this.skierId = skierId;
     this.resortId = resortId;
     this.seasonId = seasonId;
@@ -23,11 +23,11 @@ public class LiftRide {
     return resortId;
   }
 
-  public int getSeasonId() {
+  public String getSeasonId() {
     return seasonId;
   }
 
-  public int getDayId() {
+  public String getDayId() {
     return dayId;
   }
 

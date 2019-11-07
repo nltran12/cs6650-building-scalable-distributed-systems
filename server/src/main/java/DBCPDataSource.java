@@ -9,6 +9,13 @@ public class DBCPDataSource {
   private static final String USERNAME = System.getenv("DB_USERNAME");
   private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
+  static {
+    try {
+      Class.forName("com.mysql.jdbc.Driver");
+    } catch (ClassNotFoundException e) {
+      e.printStackTrace();
+    }
+  }
 
   static {
     // https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-jdbc-url-format.html
