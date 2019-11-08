@@ -9,7 +9,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class SkierThread extends Thread {
-  private final String BASE_PATH = "http://54.188.255.84:8080/server_war/";
+  private final String BASE_PATH = "http://54.191.150.225:8080/server_war/";
   //private final String BASE_PATH = "http://localhost:8080/server_war_exploded/";
   private Integer resortID;
   private String seasonID;

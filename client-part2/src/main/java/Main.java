@@ -46,7 +46,7 @@ public class Main {
         90, numPhase1Requests, ((int)Math.ceil(numReducedThreads / 10.0)), results, overallLatch);
     Phase phase2 = new Phase(numThreads, numSkiers, 5, SEASON_ID, DAY_ID, numLifts, 91, 360,
         numPhase2Requests, ((int)Math.ceil(numThreads / 10.0)), results, overallLatch);
-    Phase phase3 = new Phase(numReducedThreads, numSkiers, 5, SEASON_ID, DAY_ID, numLifts, 361,
+    Phase3 phase3 = new Phase3(numReducedThreads, numSkiers, 5, SEASON_ID, DAY_ID, numLifts, 361,
         420, numPhase3Requests, numReducedThreads, results, overallLatch);
 
     try {
@@ -66,7 +66,7 @@ public class Main {
 
   // Given each phase and the count down latch, runs each phase awaiting for all the threads to
   // finish. Returns the wall time of the run.
-  private static long runPhases(Phase phase1, Phase phase2, Phase phase3,
+  private static long runPhases(Phase phase1, Phase phase2, Phase3 phase3,
       CountDownLatch overallLatch) throws InterruptedException {
     Timestamp startTime = new Timestamp(System.currentTimeMillis());
     phase1.run();
