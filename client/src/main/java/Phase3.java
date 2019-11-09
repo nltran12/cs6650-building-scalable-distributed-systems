@@ -32,13 +32,15 @@ public class Phase3 {
   }
 
   public void run() throws InterruptedException {
+    CountDownLatch latch = new CountDownLatch(this.numWaitThreads);
     for (int i = 0; i < this.numThreads; i++) {
       int startSkiers = 1 + (i * (this.numSkiers / this.numThreads));
       int endSkiers = (i + 1) * (this.numSkiers / this.numThreads);
       Thread thread = new Phase3Thread(this.resortID, this.seasonID, this.dayID, startSkiers,
-          endSkiers, this.startTime, this.endTime, numLifts, numPostRequests, this.results,
+          endSkiers, this.startTime, this.endTime, numLifts, latch, numPostRequests, this.results,
           this.overallLatch);
       thread.start();
     }
+    latch.await();
   }
 }

@@ -4,14 +4,14 @@ import java.util.List;
 public class DataProcessor {
   private double mean;
   private double median;
-  private long throughput;
+  private int throughput;
   private Integer maxResponse;
   private Integer nintyninthPercentile;
 
-  public DataProcessor(List<Integer> responseTimes, long wallTime) {
+  public DataProcessor(List<Integer> responseTimes, float wallTime, long successfulPosts) {
     this.mean = calculateMean(responseTimes);
     this.median = calculateMedian(responseTimes);
-    this.throughput = responseTimes.size() / wallTime;
+    this.throughput =  (int)(successfulPosts / wallTime);
     this.maxResponse = responseTimes.get(responseTimes.size() - 1);
     this.nintyninthPercentile = responseTimes.get((int) Math.ceil(responseTimes.size() * 0.99) - 1);
   }
@@ -46,7 +46,7 @@ public class DataProcessor {
     return median;
   }
 
-  public long getThroughput() {
+  public int getThroughput() {
     return throughput;
   }
 

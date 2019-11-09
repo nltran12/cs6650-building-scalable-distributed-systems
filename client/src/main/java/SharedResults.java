@@ -17,7 +17,7 @@ public class SharedResults {
   }
 
   public synchronized void incrementFailedPost(int increment) {
-    this.failedPosts -= increment;
+    this.failedPosts += increment;
   }
 
   public synchronized void addNewResults(List<String> newResults) {

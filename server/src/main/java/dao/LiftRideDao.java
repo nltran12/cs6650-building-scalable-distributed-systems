@@ -3,6 +3,7 @@ package dao;
 import java.sql.*;
 import model.LiftRide;
 
+
 public class LiftRideDao {
 
   public void createLiftRide(LiftRide newLiftRide) {
@@ -24,5 +25,27 @@ public class LiftRideDao {
     } catch (SQLException e) {
       e.printStackTrace();
     }
+  }
+
+  public int getDayVertical(int resortId, String seasonId, String dayId,
+      int skierId) {
+    int totalVertical = 0;
+    String selectCreditCard = "SELECT vertical FROM LiftRides WHERE skierId=? AND resortId=? AND"
+        + " seasonId=? AND dayId=?;";
+    ResultSet result = null;
+    try (Connection conn = DBCPDataSource.getConnection();
+        PreparedStatement preparedStatement = conn.prepareStatement(selectCreditCard)) {
+      preparedStatement.setInt(1, skierId);
+      preparedStatement.setInt(2, resortId);
+      preparedStatement.setString(3, seasonId);
+      preparedStatement.setString(4, dayId);
+      result = preparedStatement.executeQuery();
+      while (result.next()) {
+        totalVertical += result.getInt("vertical");
+      }
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+    return totalVertical;
   }
 }

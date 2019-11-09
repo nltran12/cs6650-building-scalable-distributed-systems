@@ -88,13 +88,14 @@ public class Main {
   }
 
   private static void printStatistics(SharedResults results, long wallTime) {
-    DataProcessor dataProcessor = new DataProcessor(getResponseTimes(results.getFileLines()), wallTime);
+    DataProcessor dataProcessor = new DataProcessor(getResponseTimes(results.getFileLines()),
+        wallTime / 1000, results.getSuccessfulPosts());
     System.out.println("Number of successful posts: " + results.getSuccessfulPosts());
     System.out.println("Number of failed posts: " + results.getFailedPosts());
     System.out.println("Wall time: " + (wallTime / 1000) + "secs");
     System.out.println("Average response time: " + dataProcessor.getMean() + " ms");
     System.out.println("Median response time: " + dataProcessor.getMedian() + " ms");
-    System.out.println("Throughput: " + dataProcessor.getThroughput() + " requests/wall time");
+    System.out.println("Throughput: " + dataProcessor.getThroughput() + " requests/sec");
     System.out.println("99th percentile: " + dataProcessor.getNintyninthPercentile() + " ms");
     System.out.println("Max response time: " + dataProcessor.getMaxResponse() + " ms");
   }

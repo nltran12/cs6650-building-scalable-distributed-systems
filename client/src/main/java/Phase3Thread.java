@@ -32,7 +32,7 @@ public class Phase3Thread extends Thread {
    */
   public Phase3Thread(Integer resortID, String seasonID, String dayID,
       Integer startSkierID, Integer endSkierID, Integer startTime, Integer endTime,
-      Integer liftID, int numPostRequests, SharedResults sharedResults,
+      Integer liftID, CountDownLatch latch, int numPostRequests, SharedResults sharedResults,
       CountDownLatch overallLatch) {
     this.resortID = resortID;
     this.seasonID = seasonID;
@@ -42,6 +42,7 @@ public class Phase3Thread extends Thread {
     this.startTime = startTime;
     this.endTime = endTime;
     this.liftID = liftID;
+    this.latch = latch;
     this.numPostRequests = numPostRequests;
     this.sharedResults = sharedResults;
     this.overallLatch = overallLatch;
@@ -88,19 +89,33 @@ public class Phase3Thread extends Thread {
         failedPosts++;
         e.printStackTrace();
       }
-      try {
-        apiInstance.getSkierDayVertical(this.resortID, this.seasonID, this.dayID, skierID);
-      } catch (ApiException e) {
-        System.err.println("Exception when calling SkierApi#getSkierDayVertical");
-      }
       long latency = endTime.getTime() - startTime.getTime();
       String fileLine = startTime.toString() + ",POST," + latency + "," + responseCode + "\n";
+      fileData.add(fileLine);
+
+      startTime = new Timestamp(System.currentTimeMillis());
+      try {
+        apiInstance.getSkierDayVertical(this.resortID, this.seasonID, this.dayID, skierID);
+        endTime = new Timestamp(System.currentTimeMillis());
+        successfulPosts++;
+        responseCode = 200;
+      } catch (ApiException e) {
+        System.err.println("Exception when calling SkierApi#getSkierDayVertical");
+        endTime = new Timestamp(System.currentTimeMillis());
+        responseCode = e.getCode();
+        failedPosts++;
+        e.printStackTrace();
+      }
+      latency = endTime.getTime() - startTime.getTime();
+      fileLine = startTime.toString() + ",GET," + latency + "," + responseCode + "\n";
       fileData.add(fileLine);
     }
     this.sharedResults.incrementSuccessfulPost(successfulPosts);
     this.sharedResults.incrementFailedPost(failedPosts);
     this.sharedResults.addNewResults(fileData);
+
     try {
+      this.latch.countDown();
       this.overallLatch.countDown();
     } catch (Exception e) {
       e.printStackTrace();

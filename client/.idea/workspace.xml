@@ -2,38 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="279d1f14-7d01-4d54-954a-e35f4d24dff7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client-part1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-part1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-part1/src/main/java/SkierThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-part1/src/main/java/SkierThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/CommandLineParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/DataProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/Phase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/Phase3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/Phase3Thread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/SharedResults.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/SkierThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/ApiCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/ApiClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/ApiException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/Configuration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/GzipRequestInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/JSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/Pair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/ProgressRequestBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/ProgressResponseBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/api/ResortsApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/api/SkiersApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/api/StatisticsApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/auth/ApiKeyAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/auth/Authentication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/auth/HttpBasicAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/auth/OAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/auth/OAuthFlow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/APIStats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/APIStatsEndpointStats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/Body.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/LiftRide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/ResortsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/ResortsListResorts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/ResponseMsg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/SeasonsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/SkierVertical.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/main/java/io/swagger/client/model/SkierVerticalResorts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/test/java/io/swagger/client/api/ResortsApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-part2/src/test/java/io/swagger/client/api/SkiersApiTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SkierThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SkierThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/GzipRequestInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/GzipRequestInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/JSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/JSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ProgressRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ProgressRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ProgressResponseBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ProgressResponseBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/api/ResortsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/api/ResortsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/api/SkiersApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/api/SkiersApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/ApiKeyAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/ApiKeyAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/Authentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/HttpBasicAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/HttpBasicAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/OAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/OAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/OAuthFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/OAuthFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Body.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/LiftRide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/LiftRide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ResortsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ResortsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ResortsListResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ResortsListResorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ResponseMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ResponseMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/SeasonsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/SeasonsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/SkierVertical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/SkierVertical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/SkierVerticalResorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/SkierVerticalResorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/dao/DBCPDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/dao/DBCPDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Phase3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Phase3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Phase3Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Phase3Thread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SharedResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SharedResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/dao/LiftRideDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/dao/LiftRideDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/tools/ResortServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/servlet/ResortServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/tools/SkierServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/servlet/SkierServlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SkierThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state relative-caret-position="-1859">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,10 +82,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SharedResults.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Phase3Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
+            <state relative-caret-position="276">
               <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/swagger/client/JSON.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2139">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/swagger/client/api/SkiersApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2967">
+              <caret line="169" selection-start-line="169" selection-end-line="169" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Phase3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+            <state relative-caret-position="989">
+              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -80,20 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Phase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-130">
-              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -101,19 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SharedResults.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="12">
+              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,21 +200,21 @@
         <option value="$PROJECT_DIR$/src/main/java/ResultsWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Phase.java" />
         <option value="$PROJECT_DIR$/src/main/java/PostResults.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SharedResults.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DataProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/CommandLineParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Phase3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Phase3Thread.java" />
         <option value="$PROJECT_DIR$/src/main/java/SkierThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Phase3Thread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DataProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SharedResults.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="800" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -180,29 +224,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="client-part2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-part2" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="client-part2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-part2" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="client-part2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-part2" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="client-part2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-part2" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -211,12 +253,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573200969200" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573269991537" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -244,8 +288,8 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="swagger-java-client" />
-      <option name="PROGRAM_PARAMETERS" value="128 20000 40 20 800" />
+      <module name="client" />
+      <option name="PROGRAM_PARAMETERS" value="256 20000 40 20 800" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -281,16 +325,20 @@
       <workItem from="1572572922481" duration="3695000" />
       <workItem from="1573087730170" duration="6321000" />
       <workItem from="1573174159899" duration="9840000" />
+      <workItem from="1573201196386" duration="578000" />
+      <workItem from="1573234850850" duration="1381000" />
+      <workItem from="1573254098174" duration="8118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77622000" />
+    <option name="totallyTimeSpent" value="87699000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="800" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="795" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19583334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,7 +349,7 @@
       <window_info id="Captures" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32893" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4534413" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36005434" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -311,7 +359,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.328877" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32880434" />
       <window_info anchor="bottom" id="Android Profiler" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -383,7 +431,7 @@
     <entry file="file://$PROJECT_DIR$/swagger/docs/LiftRide.md" />
     <entry file="file://$PROJECT_DIR$/swagger/docs/Body.md" />
     <entry file="file://$PROJECT_DIR$/src/main/java/SkierApiExample.java" />
-    <entry file="file://$PROJECT_DIR$/../server/src/main/java/tools/SkierServlet.java">
+    <entry file="file://$PROJECT_DIR$/../server/src/main/java/servlet/SkierServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
           <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
@@ -393,20 +441,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../server/src/main/java/tools/ResortServlet.java">
+    <entry file="file://$PROJECT_DIR$/../server/src/main/java/servlet/ResortServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
           <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/swagger/client/JSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1628">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -450,13 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/swagger/client/api/SkiersApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ResultsWriter.java" />
     <entry file="file://$PROJECT_DIR$/../../../Part2 Client/SkierThread.java" />
     <entry file="file://$PROJECT_DIR$/../../../cs6650-building-scalable-distributed-systems/client/src/main/java/SkierThread.java" />
@@ -474,36 +508,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SharedResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Phase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="322">
+          <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Phase3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="989">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Phase3Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/swagger/client/JSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2139">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/swagger/client/api/SkiersApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2967">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        <state relative-caret-position="155">
+          <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -512,25 +568,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SkierThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="-1859">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Phase3.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SharedResults.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Phase3Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="152">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -554,7 +603,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Android</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -589,11 +638,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Android|client</last-edited>
+          <last-edited>client</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

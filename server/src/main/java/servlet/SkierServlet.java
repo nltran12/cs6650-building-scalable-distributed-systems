@@ -1,4 +1,4 @@
-package tools;
+package servlet;
 
 import com.google.gson.Gson;
 import dao.LiftRideDao;
@@ -79,14 +79,17 @@ public class SkierServlet extends HttpServlet {
       Message message = new Message("string");
       res.getWriter().write(gson.toJson(message));
     } else {
-      res.setStatus(HttpServletResponse.SC_OK);
+
       // Process url params
       if (urlParts[2].equals("vertical")) {
         SkierVertical skierVertical = new SkierVertical(urlParts[1], 10);
         res.getWriter().write(gson.toJson(new SkierResorts(skierVertical)));
       } else {
-        res.getWriter().write("34507");
+        LiftRideDao liftRideDao = new LiftRideDao();
+        res.getWriter().write(String.valueOf(liftRideDao.getDayVertical(Integer.parseInt(urlParts[1]), urlParts[3],
+            urlParts[5], Integer.parseInt(urlParts[7]))));
       }
+      res.setStatus(HttpServletResponse.SC_OK);
     }
   }
 
