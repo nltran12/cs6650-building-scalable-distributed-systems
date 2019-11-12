@@ -1,4 +1,4 @@
-package dao;
+package dal;
 
 import java.sql.*;
 import model.LiftRide;
@@ -32,16 +32,18 @@ public class LiftRideDao {
     int totalVertical = 0;
     String selectCreditCard = "SELECT vertical FROM LiftRides WHERE skierId=? AND resortId=? AND"
         + " seasonId=? AND dayId=?;";
-    ResultSet result = null;
     try (Connection conn = DBCPDataSource.getConnection();
         PreparedStatement preparedStatement = conn.prepareStatement(selectCreditCard)) {
       preparedStatement.setInt(1, skierId);
       preparedStatement.setInt(2, resortId);
       preparedStatement.setString(3, seasonId);
       preparedStatement.setString(4, dayId);
-      result = preparedStatement.executeQuery();
-      while (result.next()) {
-        totalVertical += result.getInt("vertical");
+      try (ResultSet result = preparedStatement.executeQuery()) {
+        while (result.next()) {
+          totalVertical += result.getInt("vertical");
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
       }
     } catch (Exception ex) {
       ex.printStackTrace();

@@ -1,4 +1,4 @@
-package dao;
+package dal;
 
 import java.sql.*;
 import org.apache.commons.dbcp2.*;
@@ -13,7 +13,7 @@ public class DBCPDataSource {
 
   static {
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
     } catch (ClassNotFoundException e) {
       e.printStackTrace();
     }
@@ -25,10 +25,10 @@ public class DBCPDataSource {
     dataSource.setUrl(url);
     dataSource.setUsername(USERNAME);
     dataSource.setPassword(PASSWORD);
-    dataSource.setMaxTotal(60);
+    dataSource.setMaxTotal(300);
     dataSource.setMinIdle(-1);
-    dataSource.setMaxIdle(60);
-    dataSource.setMaxOpenPreparedStatements(100);
+    dataSource.setMaxIdle(300);
+    dataSource.setMaxOpenPreparedStatements(300);
   }
 
   public static Connection getConnection() throws SQLException {
