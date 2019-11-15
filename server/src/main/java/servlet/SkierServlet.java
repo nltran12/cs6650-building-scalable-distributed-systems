@@ -1,8 +1,11 @@
 package servlet;
 
 import com.google.gson.Gson;
+import dal.CacheSource;
 import dal.LiftRideDao;
+import io.lettuce.core.*;
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,17 +21,19 @@ import model.SkierVertical;
 public class SkierServlet extends HttpServlet {
 
   private Gson gson  = new Gson();
-  private static final int DAY_ID_MIN = 1;
-  private static final int DAY_ID_MAX = 366;
-  private static final String SEASONS_PARAMETER = "seasons";
-  private static final String DAYS_PARAMETER = "days";
-  private static final String SKIERS_PARAMETER = "skiers";
-  private static final String VERTICAL_PARAMETER = "vertical";
-  private static final String RESORTS_PARAMETER = "resorts";
+  private final int DAY_ID_MIN = 1;
+  private final int DAY_ID_MAX = 366;
+  private final String SEASONS_PARAMETER = "seasons";
+  private final String DAYS_PARAMETER = "days";
+  private final String SKIERS_PARAMETER = "skiers";
+  private final String VERTICAL_PARAMETER = "vertical";
+  private final String RESORTS_PARAMETER = "resorts";
 
+  @SuppressWarnings("Duplicates")
   protected void doPost(HttpServletRequest request,
       HttpServletResponse response)
       throws ServletException, IOException {
+    long start = System.nanoTime();
     response.setContentType("application/json");
     response.setCharacterEncoding("UTF-8");
     String urlPath = request.getPathInfo();
@@ -44,9 +49,9 @@ public class SkierServlet extends HttpServlet {
     // and now validate url path and return the response status code
     // (and maybe also some value if input is valid)
     if (!isUrlValid(urlParts, request)) {
-      response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
       Message message = new Message("string");
       response.getWriter().write(gson.toJson(message));
+      response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
     } else {
         PostBody postBody = gson.fromJson(request.getReader(), PostBody.class);
         LiftRideDao liftRideDao = new LiftRideDao();
@@ -55,10 +60,20 @@ public class SkierServlet extends HttpServlet {
             postBody.getTime(), postBody.getLiftID()));
         response.setStatus(HttpServletResponse.SC_OK);
     }
+//    long finish = System.nanoTime();
+//    long latency = (finish - start) / 1000000; // in ms
+//    String cacheKey = "POST_SKIER";
+//    try {
+//      cacheLatency(latency, cacheKey);
+//    } catch (Exception ex) {
+//      ex.printStackTrace();
+//    }
   }
 
+  @SuppressWarnings("Duplicates")
   protected void doGet(HttpServletRequest req, HttpServletResponse res)
       throws ServletException, IOException {
+    long start = System.nanoTime();
     res.setContentType("application/json");
     res.setCharacterEncoding("UTF-8");
     String urlPath = req.getPathInfo();
@@ -75,11 +90,10 @@ public class SkierServlet extends HttpServlet {
     // (and maybe also some value if input is valid)
 
     if (!isUrlValid(urlParts, req)) {
-      res.setStatus(HttpServletResponse.SC_BAD_REQUEST);
       Message message = new Message("string");
       res.getWriter().write(gson.toJson(message));
+      res.setStatus(HttpServletResponse.SC_BAD_REQUEST);
     } else {
-
       // Process url params
       if (urlParts[2].equals("vertical")) {
         SkierVertical skierVertical = new SkierVertical(urlParts[1], 10);
@@ -91,6 +105,14 @@ public class SkierServlet extends HttpServlet {
       }
       res.setStatus(HttpServletResponse.SC_OK);
     }
+//    long finish = System.nanoTime();
+//    long latency = (finish - start) / 1000000; // in ms
+//    String cacheKey = "GET_SKIER";
+//    try {
+//      cacheLatency(latency, cacheKey);
+//    } catch (Exception ex) {
+//      ex.printStackTrace();
+//    }
   }
 
   private boolean isUrlValid(String[] urlPath, HttpServletRequest req) {
@@ -120,4 +142,19 @@ public class SkierServlet extends HttpServlet {
     }
     return false;
   }
+
+//  private void cacheLatency(long latency, String key)
+//      throws ExecutionException, InterruptedException {
+//    String countKey = key + "_COUNT";
+//    String latencyKey = key + "_LATENCY";
+//    String maxKey = key + "_MAX";
+//    CacheSource.getConnection().incr(countKey);
+//    CacheSource.getConnection().incrby(latencyKey, latency);
+//    RedisFuture<String> currentMax = CacheSource.getConnection().get(maxKey);
+//    if (currentMax.get() != null && Integer.parseInt(currentMax.get()) < latency) {
+//      CacheSource.getConnection().set(maxKey, latency + "");
+//    } else {
+//      CacheSource.getConnection().set(maxKey, latency + "");
+//    }
+//  }
 }

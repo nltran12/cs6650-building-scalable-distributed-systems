@@ -25,10 +25,10 @@ public class DBCPDataSource {
     dataSource.setUrl(url);
     dataSource.setUsername(USERNAME);
     dataSource.setPassword(PASSWORD);
-    dataSource.setMaxTotal(300);
+    dataSource.setMaxTotal(75);
     dataSource.setMinIdle(-1);
-    dataSource.setMaxIdle(300);
-    dataSource.setMaxOpenPreparedStatements(300);
+    dataSource.setMaxIdle(75);
+    dataSource.setMaxOpenPreparedStatements(100);
   }
 
   public static Connection getConnection() throws SQLException {
