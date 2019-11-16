@@ -14,10 +14,14 @@
  * limitations under the License.
  */
 
-package dal;
+package com.example.cloudsql;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Logger;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -25,6 +29,8 @@ import javax.sql.DataSource;
 
 @WebListener("Creates a connection pool that is stored in the Servlet's context for later use.")
 public class ConnectionPoolContextListener implements ServletContextListener {
+
+  private static final Logger LOGGER = Logger.getLogger(IndexServlet.class.getName());
 
   // Saving credentials in environment variables is convenient, but not secure - consider a more
   // secure solution such as https://cloud.google.com/kms/ to help keep secrets safe.
@@ -93,6 +99,17 @@ public class ConnectionPoolContextListener implements ServletContextListener {
     return pool;
   }
 
+  private void createTable(DataSource pool) throws SQLException {
+    // Safely attempt to create the table schema.
+    try (Connection conn = pool.getConnection()) {
+      PreparedStatement createTableStatement = conn.prepareStatement(
+          "CREATE TABLE IF NOT EXISTS votes ( "
+              + "vote_id SERIAL NOT NULL, time_cast timestamp NOT NULL, candidate CHAR(6) NOT NULL,"
+              + " PRIMARY KEY (vote_id) );"
+      );
+      createTableStatement.execute();
+    }
+  }
 
   @Override
   public void contextDestroyed(ServletContextEvent event) {
@@ -111,6 +128,12 @@ public class ConnectionPoolContextListener implements ServletContextListener {
     if (pool == null) {
       pool = createConnectionPool();
       event.getServletContext().setAttribute("my-pool", pool);
+    }
+    try {
+      createTable(pool);
+    } catch (SQLException ex) {
+      throw new RuntimeException("Unable to verify table schema. Please double check the steps"
+          + "in the README and try again.", ex);
     }
   }
 }
