@@ -9,10 +9,11 @@ import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import model.LiftRide;
+import servlet.SkierServlet;
 
 
 public class LiftRideDao {
-  private static final Logger LOGGER = Logger.getLogger(LiftRideDao.class.getName());
+  private static final Logger LOGGER = Logger.getLogger(SkierServlet.class.getName());
 
   public void createLiftRide(LiftRide newLiftRide, HttpServletRequest req) {
     String insertQueryStatement = "INSERT INTO LiftRides (skierId, resortId, seasonId, dayId, "
