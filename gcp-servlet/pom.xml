@@ -1,24 +1,9 @@
-<!--
-  Copyright 2018 Google LLC
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
--->
 <project>
   <modelVersion>4.0.0</modelVersion>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <groupId>com.example.cloudsql</groupId>
-  <artifactId>tabs-vs-spaces-mysql</artifactId>
+  <groupId>SkierResort</groupId>
+  <artifactId>SkierResort</artifactId>
 
   <!--
     The parent pom defines common style checks and testing strategies for our samples.
@@ -40,7 +25,7 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <version>4.0.1</version>
       <type>jar</type>
       <scope>provided</scope>
     </dependency>
@@ -52,7 +37,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.11</version>
+      <version>8.0.18</version>
     </dependency>
     <dependency>
       <groupId>com.google.cloud.sql</groupId>
@@ -63,6 +48,11 @@
       <groupId>com.zaxxer</groupId>
       <artifactId>HikariCP</artifactId>
       <version>3.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.5</version>
     </dependency>
   </dependencies>
 
@@ -81,7 +71,7 @@
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
         <version>1.3.2</version>
-     </plugin>
+      </plugin>
     </plugins>
   </build>
 </project>
