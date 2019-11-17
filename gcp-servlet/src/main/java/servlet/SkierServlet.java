@@ -52,7 +52,7 @@ public class SkierServlet extends HttpServlet {
         LiftRideDao liftRideDao = new LiftRideDao();
         liftRideDao.createLiftRide(new LiftRide(Integer.parseInt(urlParts[7]),
             Integer.parseInt(urlParts[1]), urlParts[3], urlParts[5],
-            postBody.getTime(), postBody.getLiftID()), request);
+            postBody.getTime(), postBody.getLiftID()));
         response.setStatus(HttpServletResponse.SC_OK);
     }
   }
@@ -87,7 +87,7 @@ public class SkierServlet extends HttpServlet {
       } else {
         LiftRideDao liftRideDao = new LiftRideDao();
         res.getWriter().write(String.valueOf(liftRideDao.getDayVertical(Integer.parseInt(urlParts[1]), urlParts[3],
-            urlParts[5], Integer.parseInt(urlParts[7]), req)));
+            urlParts[5], Integer.parseInt(urlParts[7]))));
       }
       res.setStatus(HttpServletResponse.SC_OK);
     }

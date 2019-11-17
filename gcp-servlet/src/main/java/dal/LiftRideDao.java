@@ -36,7 +36,7 @@ public class LiftRideDao {
   }
 
   public int getDayVertical(int resortId, String seasonId, String dayId,
-      int skierId, HttpServletRequest req) {
+      int skierId) {
     int totalVertical = 0;
     String selectCreditCard = "SELECT vertical FROM LiftRides WHERE skierId=? AND resortId=? AND"
         + " seasonId=? AND dayId=?;";
