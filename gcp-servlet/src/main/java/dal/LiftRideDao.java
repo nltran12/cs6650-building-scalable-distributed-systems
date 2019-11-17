@@ -4,12 +4,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import model.LiftRide;
 
 
 public class LiftRideDao {
+  private static final Logger LOGGER = Logger.getLogger(LiftRideDao.class.getName());
 
   public void createLiftRide(LiftRide newLiftRide, HttpServletRequest req) {
     String insertQueryStatement = "INSERT INTO LiftRides (skierId, resortId, seasonId, dayId, "
@@ -30,7 +33,7 @@ public class LiftRideDao {
       // execute insert SQL statement
       preparedStatement.executeUpdate();
     } catch (SQLException e) {
-      e.printStackTrace();
+      LOGGER.log(Level.WARNING, "Error getting connection", e);
     }
   }
 
@@ -51,10 +54,10 @@ public class LiftRideDao {
           totalVertical += result.getInt("vertical");
         }
       } catch (Exception e) {
-        e.printStackTrace();
+        LOGGER.log(Level.WARNING, "Error getting results", e);
       }
     } catch (Exception ex) {
-      ex.printStackTrace();
+      LOGGER.log(Level.WARNING, "Error getting connection", ex);
     }
     return totalVertical;
   }
