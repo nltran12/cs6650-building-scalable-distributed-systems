@@ -71,7 +71,7 @@
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
         <configuration>
-          <deploy.projectId>SkierResort</deploy.projectId>
+          <deploy.projectId>skier-259122</deploy.projectId>
           <deploy.version>1</deploy.version>
         </configuration>
         <version>2.2.0</version>
